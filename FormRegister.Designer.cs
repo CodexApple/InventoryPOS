@@ -51,10 +51,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(238, 102);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(229, 16);
+            this.label6.Size = new System.Drawing.Size(223, 16);
             this.label6.TabIndex = 23;
             this.label6.Text = "Register User to Access Dashboard";
             // 
@@ -91,7 +91,7 @@
             this.registerForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.registerForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.registerForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerForm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerForm.ForeColor = System.Drawing.SystemColors.Highlight;
             this.registerForm.Location = new System.Drawing.Point(22, 387);
             this.registerForm.Name = "registerForm";
@@ -106,77 +106,78 @@
             this.registerBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.registerBtn.FlatAppearance.BorderSize = 0;
             this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerBtn.Location = new System.Drawing.Point(482, 387);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(139, 39);
             this.registerBtn.TabIndex = 19;
             this.registerBtn.Text = "Sign In!";
             this.registerBtn.UseVisualStyleBackColor = false;
+            this.registerBtn.Click += new System.EventHandler(this.registerProcess);
             // 
             // regPassBox
             // 
-            this.regPassBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regPassBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regPassBox.Location = new System.Drawing.Point(233, 242);
             this.regPassBox.Name = "regPassBox";
-            this.regPassBox.Size = new System.Drawing.Size(388, 31);
+            this.regPassBox.Size = new System.Drawing.Size(388, 29);
             this.regPassBox.TabIndex = 18;
             // 
             // regUserBox
             // 
-            this.regUserBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regUserBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regUserBox.Location = new System.Drawing.Point(233, 193);
             this.regUserBox.Name = "regUserBox";
-            this.regUserBox.Size = new System.Drawing.Size(388, 31);
+            this.regUserBox.Size = new System.Drawing.Size(388, 29);
             this.regUserBox.TabIndex = 17;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(584, 631);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 16);
+            this.label5.Size = new System.Drawing.Size(81, 13);
             this.label5.TabIndex = 16;
             this.label5.Text = "LightSolus LLC.";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(491, 631);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 16);
+            this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 15;
             this.label4.Text = "Developed By:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(60, 245);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 22);
+            this.label3.Size = new System.Drawing.Size(92, 24);
             this.label3.TabIndex = 14;
             this.label3.Text = "Password";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(60, 196);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 22);
+            this.label2.Size = new System.Drawing.Size(97, 24);
             this.label2.TabIndex = 13;
             this.label2.Text = "Username";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(171, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(355, 56);
+            this.label1.Size = new System.Drawing.Size(376, 55);
             this.label1.TabIndex = 12;
             this.label1.Text = "LightSolus POS";
             // 
@@ -195,19 +196,19 @@
             // 
             // regOldPassBox
             // 
-            this.regOldPassBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regOldPassBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regOldPassBox.Location = new System.Drawing.Point(233, 292);
             this.regOldPassBox.Name = "regOldPassBox";
-            this.regOldPassBox.Size = new System.Drawing.Size(388, 31);
+            this.regOldPassBox.Size = new System.Drawing.Size(388, 29);
             this.regOldPassBox.TabIndex = 25;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(60, 295);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 22);
+            this.label7.Size = new System.Drawing.Size(156, 24);
             this.label7.TabIndex = 24;
             this.label7.Text = "Retype Password";
             // 

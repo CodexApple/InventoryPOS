@@ -33,6 +33,9 @@ namespace App.Models
 
                 if (reader.Read())
                 {
+                    Session.username = reader.GetString("username");
+                    Session.userType = reader.GetInt32("user_type");
+
                     return 1;
                 }
             }

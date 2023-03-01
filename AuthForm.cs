@@ -29,9 +29,10 @@ namespace InventorySystem
         private void loginProcess(object sender, EventArgs e)
         {
             var formDashboard = new Dashboard();
-            formDashboard.Show();
+            var formPOSBoard = new POSBoard();
+            //formDashboard.Show();
 
-            /*
+            
             User user = new User();
 
             user.username = usernameBox.Text;
@@ -41,10 +42,21 @@ namespace InventorySystem
             {
                 this.Hide();
 
-                formDashboard.Show();
-                MessageBox.Show("Successfully logged In!", "Authentication");
+                if (Session.userType == 2)
+                {
+                    
+                    formPOSBoard.Show();
+                }
+                else 
+                {
+                    formDashboard.Show();
+
+                }
+
+                
+                
             } else MessageBox.Show("You have entered an invalid credentials\nPlease try again.", "Authentication");
-            */
+            
         }
 
         private void showRegisterForm(object sender, EventArgs e)

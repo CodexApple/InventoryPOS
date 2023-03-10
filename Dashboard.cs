@@ -22,6 +22,8 @@ namespace InventorySystem
 
         public void componentInit()
         {
+            inventoryDash.Hide();
+            reportsDash.Hide();
             userDash.Show();
 
             this.BackColor = ColorTranslator.FromHtml("#f7f7f7");
@@ -37,15 +39,27 @@ namespace InventorySystem
         private void showInventory(object sender, EventArgs e)
         {
             userDash.Hide();
-
+            reportsDash.Hide();
             inventoryDash.Show();
         }
 
         private void showDashboard(object sender, EventArgs e)
         {
             inventoryDash.Hide();
-
+            reportsDash.Hide();
             userDash.Show();
+        }
+
+        private void inventoryDash_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showReport(object sender, EventArgs e)
+        {
+            inventoryDash.Hide();
+            userDash.Hide();
+            reportsDash.Show();
         }
     }
 }

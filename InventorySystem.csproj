@@ -51,6 +51,24 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.26.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.0.26\lib\net48\MySql.Data.dll</HintPath>
     </Reference>
@@ -102,14 +120,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppControllers\UserController.cs" />
+    <Compile Include="AppControllers\DateTimeController.cs" />
     <Compile Include="AppDatabase\DatabaseManager.cs" />
+    <Compile Include="AppModels\ReceivableModel.cs" />
     <Compile Include="AppModels\Authentication.cs" />
     <Compile Include="AppModels\OrdersModel.cs" />
+    <Compile Include="AppModels\PayableModel.cs" />
     <Compile Include="AppModels\ProductModel.cs" />
     <Compile Include="AppModels\SalesModel.cs" />
     <Compile Include="AppModels\UserModel.cs" />
+    <Compile Include="AppObjects\Receivables.cs" />
     <Compile Include="AppObjects\Orders.cs" />
+    <Compile Include="AppObjects\Payables.cs" />
     <Compile Include="AppObjects\Products.cs" />
     <Compile Include="AppObjects\Sales.cs" />
     <Compile Include="AppObjects\Session.cs" />
@@ -119,6 +141,14 @@
     </Compile>
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet.cs">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FormRegister.cs">
       <SubType>UserControl</SubType>
@@ -132,6 +162,18 @@
     <Compile Include="AuthForm.Designer.cs">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\formARAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formARAP.Designer.cs">
+      <DependentUpon>formARAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formAddProduct.Designer.cs">
+      <DependentUpon>formAddProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InventoryDash.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,6 +185,18 @@
     </Compile>
     <Compile Include="Forms\ProductDash.Designer.cs">
       <DependentUpon>ProductDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formProductReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formProductReport.Designer.cs">
+      <DependentUpon>formProductReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportsDash.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportsDash.Designer.cs">
+      <DependentUpon>ReportsDash.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserDash.cs">
       <SubType>UserControl</SubType>
@@ -158,6 +212,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,11 +222,26 @@
     <EmbeddedResource Include="AuthForm.resx">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formARAP.resx">
+      <DependentUpon>formARAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formAddProduct.resx">
+      <DependentUpon>formAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formProductReport.resx">
+      <DependentUpon>formProductReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\InventoryDash.resx">
       <DependentUpon>InventoryDash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductDash.resx">
       <DependentUpon>ProductDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportsDash.resx">
+      <DependentUpon>ReportsDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report\SalesReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserDash.resx">
       <DependentUpon>UserDash.cs</DependentUpon>
@@ -188,6 +258,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -204,6 +285,21 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

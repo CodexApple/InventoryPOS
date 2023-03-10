@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,11 @@ namespace App.Database
 {
     public class DatabaseManager
     {
+        public static DataTable dataTable;
+        public static DataSet dataSet;
+        public static MySqlConnection connection;
+        public static MySqlDataAdapter adapter;
+
         private static string SERVER = "localhost";
         private static string PORT = "40000";
         private static string USERNAME = "root";
@@ -34,6 +40,35 @@ namespace App.Database
             var mySqlCommand = new MySqlCommand(query, connection);
 
             return mySqlCommand;
+        }
+
+        public static DataTable GetDataTable(String query)
+        {
+            using (connection = GetConnection())
+            {
+                dataTable = new DataTable();
+
+                using (adapter = new MySqlDataAdapter(query, connection))
+                {
+                    adapter.Fill(dataTable);
+                }
+            }
+
+            return dataTable;
+        }
+        
+        public static DataSet GetDataSet(String query, String table)
+        {
+            using (connection = GetConnection())
+            {
+                dataSet = new DataSet();
+                using (adapter = new MySqlDataAdapter(query, connection))
+                {
+                    adapter.Fill(dataSet, table);
+                }
+            }
+
+            return dataSet;
         }
     }
 }

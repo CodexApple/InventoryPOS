@@ -31,7 +31,7 @@ namespace InventorySystem
         private void button1_Click(object sender, EventArgs e)
         {
             Orders orders = new Orders();
-            Products products = ProductModel.GetById(barcodeidTextbox.Text);
+            Products products = ProductModel.GetByBarcodeId(barcodeidTextbox.Text);
           
             orders.order_id = int.Parse(orderidTextbox.Text);
             orders.prod_id = products.id;
@@ -48,6 +48,11 @@ namespace InventorySystem
             dataGridView1.DataSource = source;
 
             grandTotalTextBox.Text = Convert.ToString(OrdersModel.GetGrandTotal(int.Parse(orderidTextbox.Text)));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Current items from order table will be transferred to pos_sales table
         }
     }
 }
